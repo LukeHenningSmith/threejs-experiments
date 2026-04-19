@@ -128,10 +128,11 @@ function generatePositions(
   yOffset: number,
   squareCount: number,
 ): [number, number, number][] {
+  const half = Math.floor(squareCount / 2);
   return Array.from({ length: squareCount }, (_, i) => [
     xOffset * i,
     yOffset * i,
-    -zOffset * i,
+    i === half ? 0 : i < half ? -zOffset * (half - i) : zOffset * (i - half),
   ]);
 }
 
@@ -152,7 +153,7 @@ export default function Example({
   return (
     <div style={{ width: width, height: height }}>
       <Canvas camera={{ position: [4, 3, 4], fov: 45 }}>
-        {positions.map((pos, i) => (
+        {[...positions].reverse().map((pos, i) => (
           <RotatingCube key={i} position={pos} delay={i * 0.1} />
         ))}
       </Canvas>
