@@ -52,7 +52,7 @@ function createGradientMaterial() {
       void main() {
         vec3 darkGreen = vec3(0.035, 0.255, 0.129);
         vec3 lightGreen = vec3(0.2, 0.8, 0.4);
-        float gradient = (vPosition.y + 0.25);
+        float gradient = (vPosition.y + 0.5);
         vec3 color = mix(darkGreen, lightGreen, gradient);
         gl_FragColor = vec4(color, 1.0);
       }
@@ -64,7 +64,7 @@ function RotatingCube({ position, delay }: RotatingCubeProps) {
   const meshRef = useRef<THREE.Mesh>(null);
 
   const geometry = useMemo(
-    () => createRoundedFrontGeometry(1, 1, 0.3, 0.1),
+    () => createRoundedFrontGeometry(1.5, 1.5, 0.45, 0.15),
     [],
   );
 
@@ -143,7 +143,7 @@ export default function Example({
   width?: number;
   height?: number;
 }) {
-  const zOffset = 0.45;
+  const zOffset = 0.675;
   const xOffset = 0;
   const yOffset = 0;
   const squareCount = 6;
