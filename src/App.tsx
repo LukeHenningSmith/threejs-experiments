@@ -34,7 +34,11 @@ function App() {
           justifyItems: "center",
         }}
       >
-        <Example width={500} height={500} />
+        <div
+          style={{ padding: "50px", marginTop: "-50px", marginBottom: "50px" }}
+        >
+          <Example width={300} height={300} />
+        </div>
       </div>
     </>
   );
