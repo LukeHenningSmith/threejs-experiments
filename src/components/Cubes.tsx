@@ -136,7 +136,7 @@ function generatePositions(
   ]);
 }
 
-export default function Example({
+export default function Cubes({
   width = 500,
   height = 500,
 }: {

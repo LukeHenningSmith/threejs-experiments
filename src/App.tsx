@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import Example from "./components/Example";
+import Cubes from "./components/Cubes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,7 +37,7 @@ function App() {
         <div
           style={{ padding: "50px", marginTop: "-50px", marginBottom: "50px" }}
         >
-          <Example width={300} height={300} />
+          <Cubes width={300} height={300} />
         </div>
       </div>
     </>
