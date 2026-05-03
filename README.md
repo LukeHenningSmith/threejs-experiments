@@ -1,3 +1,7 @@
 # Exploring ThreeJS animations
 
-This is a repository for exploring the world of ThreeJS.
+This is a repository of some fun things ive made using ThreeJS.
+
+### Rotating cubes
+
+![Cubes](./public/cubes.gif)
